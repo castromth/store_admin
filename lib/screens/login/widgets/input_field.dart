@@ -13,7 +13,6 @@ class InputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
       child: TextFormField(
         obscureText: obscure,
         style: TextStyle(color: Colors.white),
