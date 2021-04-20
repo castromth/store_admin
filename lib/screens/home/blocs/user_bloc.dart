@@ -1,6 +1,5 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:rxdart/subjects.dart';
 
 
@@ -36,7 +35,6 @@ class UserBloc extends BlocBase {
             _users.remove(uid);
             _usersController.add(_users.values.toList());
             break;
-
         }
       });
     });
@@ -48,7 +46,6 @@ class UserBloc extends BlocBase {
       double money = 0.0;
       for(DocumentSnapshot d in orders.docs){
         DocumentSnapshot order = await _firestore.collection("orders").doc(d.id).get();
-        print(order.data());
         if(order.data() != null)
           money += order.data()["totalPrice"];
       }
@@ -63,6 +60,26 @@ class UserBloc extends BlocBase {
 
   void _unsubscribeToOrders(String uid){
     _users[uid]["subscription"].cancel();
+  }
+
+  void onChangedSearch(String search){
+    if(search.trim().isEmpty){
+      _usersController.add(_users.values.toList());
+    }else {
+      _usersController.add(_filter(search.trim()));
+    }
+  }
+
+  List<Map<String, dynamic>> _filter(String search){
+    List<Map<String, dynamic>> filteredUsers = List.from(_users.values.toList());
+    filteredUsers.retainWhere((user) {
+      return user["name"].toUpperCase().contains(search.toUpperCase());
+    });
+    return filteredUsers;
+  }
+
+  Map<String, dynamic> getUser(String uid){
+    return _users[uid];
   }
 
   @override
