@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "812833134123",
+    "firebase_url": "https://loja-udem.firebaseio.com",
+    "project_id": "loja-udem",
+    "storage_bucket": "loja-udem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812833134123:android:1acb0ee8a659f76cd17c6e",
+        "android_client_info": {
+          "package_name": "br.com.skynet.loja_udemy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812833134123-nggkh2aaj3qm3e12ci9fs6ppietbnsga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfdGkh3ND-tstdjX82odQ_2f0w1PSZaBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812833134123-nggkh2aaj3qm3e12ci9fs6ppietbnsga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812833134123:android:5ab1a53dd38a4158d17c6e",
+        "android_client_info": {
+          "package_name": "com.example.store_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812833134123-nggkh2aaj3qm3e12ci9fs6ppietbnsga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfdGkh3ND-tstdjX82odQ_2f0w1PSZaBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812833134123-nggkh2aaj3qm3e12ci9fs6ppietbnsga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
