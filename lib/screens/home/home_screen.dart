@@ -6,6 +6,7 @@ import 'package:store_admin/screens/home/blocs/user_bloc.dart';
 import 'package:store_admin/screens/home/tabs/orders_tab.dart';
 import 'package:store_admin/screens/home/tabs/products_tab.dart';
 import 'package:store_admin/screens/home/tabs/users_tab.dart';
+import 'package:store_admin/screens/home/tabs/widgets/edit_categoryDialog.dart';
 
 
 
@@ -100,6 +101,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 }
             )
           ],
+        );
+      case 2:
+        return FloatingActionButton(
+          child: Icon(Icons.add),
+          backgroundColor: Colors.pinkAccent,
+          onPressed: (){
+            showDialog(context: context, builder: (context) => EditCategoryDialog());
+          },
         );
     }
   }

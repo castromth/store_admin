@@ -55,6 +55,9 @@ class ProcuctBloc extends BlocBase {
   void saveImages(List images) {
     unsavedData["images"] = images;
   }
+  void saveSizes(List sizes) {
+    unsavedData["sizes"] = sizes;
+  }
 
   Future<bool> saveProduct() async {
     _loadController.add(true);

@@ -12,7 +12,11 @@ class ProductValidator {
     return null;
   }
 
-
+  String validateSizes(List l){
+    print(l);
+    if(l.isEmpty) return " ";
+    return null;
+  }
   String validadePrice(String text){
     double price = double.tryParse(text);
     if(price != null){
